@@ -25,6 +25,7 @@ model = genai.GenerativeModel("gemini-2.5-flash")
 
 # Configure Brevo (Sendinblue) transactional email
 BREVO_API_KEY = os.getenv("BREVO_API_KEY")
+# There's some problem with the Brevo Api Key
 BREVO_SENDER_EMAIL = os.getenv("BREVO_SENDER_EMAIL")
 BREVO_SENDER_NAME = os.getenv("BREVO_SENDER_NAME", "No-Reply")
 EMAIL_DRY_RUN = os.getenv("EMAIL_DRY_RUN", "false").lower() in {"1", "true", "yes"}
