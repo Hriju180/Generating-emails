@@ -1,0 +1,8 @@
+Flask
+flask-cors
+python-dotenv
+google-generativeai
+sib-api-v3-sdk
+streamlit
+requests
+
