@@ -80,6 +80,16 @@ The backend will listen on `http://localhost:6000`.
 
 In the Streamlit sidebar, set Backend URL to `http://localhost:6000` if it isn’t already.
 
+### Docker (Compose)
+1) Create a `.env` with your keys (see above)
+2) Build and start:
+```
+docker compose up -d --build
+```
+3) Access:
+- Backend: `http://localhost:6000`
+- Frontend: `http://localhost:8501`
+
 ### API
 - POST `/generate-email`
   - Request JSON:

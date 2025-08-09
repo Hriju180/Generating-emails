@@ -1,0 +1,18 @@
+FROM python:3.13-slim
+
+WORKDIR /app
+
+# Install only what's needed for Streamlit UI
+RUN pip install --no-cache-dir streamlit requests
+
+# Copy frontend code
+COPY frontend ./frontend
+
+# Default backend URL points to docker-compose service name
+ENV BACKEND_URL=http://backend:6000
+
+EXPOSE 8501
+
+CMD streamlit run frontend/app.py --server.port 8501 --server.address 0.0.0.0
+
+
